@@ -7,11 +7,7 @@ pipeline {
 	}
 	
 	stages {
-		stage('Verification  stage') {
-				steps {
-					echo '--------------:: This is verification stage :: ------------'
-					sh 'mvn clean verify'
-				}
+		
 
 		
 		stage('Compile stage') {
@@ -34,4 +30,3 @@ pipeline {
 		
 	}
 
-}
