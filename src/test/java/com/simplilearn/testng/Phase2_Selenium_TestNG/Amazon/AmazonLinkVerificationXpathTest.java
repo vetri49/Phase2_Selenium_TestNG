@@ -18,21 +18,24 @@ public class AmazonLinkVerificationXpathTest {
 
 	WebDriver driver;
 	WebDriverWait wait;
-	String siteurl="https://www.amazon.in";
-	String driverpath="drivers/windows/geckodriver.exe";
+	String siteurl = "https://www.amazon.in";
+	String driverpath = "drivers/windows/geckodriver.exe";
+
 	@BeforeMethod
 	public void setup() {
 		System.setProperty("webdriver.geckodriver.driver", driverpath);
-		FirefoxOptions op=new FirefoxOptions();
+		FirefoxOptions op = new FirefoxOptions();
 		op.addArguments("--headless");
-		driver=new FirefoxDriver(op);
+		driver = new FirefoxDriver(op);
 		driver.get(siteurl);
-		wait=new WebDriverWait(driver,Duration.ofSeconds(50));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 	}
+
 	@AfterMethod
 	public void close() {
 		driver.quit();
 	}
+
 	@Test(description = "Test Amazon Mobile Phones Title Match")
 	public void xpathLinkTest1() throws InterruptedException {
 		WebElement mobileLink = driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[6]"));
