@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class AmazonHomePageTest {
 
 	WebDriver driver;
-	String siteurl = "https://www.amazon.in";
+	String siteurl = "https://www.amazon.in/";
 	String driverpath = "driver/windows/geckodriver.exe";
 
 	@BeforeMethod
