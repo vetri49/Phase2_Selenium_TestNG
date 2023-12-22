@@ -29,7 +29,7 @@ public class BrowseBasedGroupTest {
 
 	@Test(groups = "chromeonly")
 	public void launchChrome() {
-		System.setProperty("webdriver.chrome.driver", chromepath);
+		System.setProperty("webdriver.chrome.driver", chromepath );
 		ChromeOptions cp = new ChromeOptions();
 		cp.addArguments("--headless");
 		driver1 = new ChromeDriver(cp);
